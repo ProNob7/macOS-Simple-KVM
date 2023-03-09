@@ -49,4 +49,5 @@ qemu-system-x86_64 \
     -device ide-hd,bus=sata.3,drive=InstallMedia \
     -drive id=SystemDisk,if=none,file="${SYSTEM_DISK}" \
     -device ide-hd,bus=sata.4,drive=SystemDisk \
+    -device vfio-pci,host=00:04.0,id=hostdev1,bus=root_port1,addr=0x1eb8,multifunction=on \
     "${MOREARGS[@]}"
